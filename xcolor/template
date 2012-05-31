@@ -1,0 +1,49 @@
+{# template #}
+<div class="theme" style="background-color: #{{ rgb['background'] }};">
+    <table class="t" style="color: #{{ rgb['foreground'] }};">
+        <col span=2 style="background-color: #{{ rgb['background'] }};" />
+
+        <col span=1 style="background-color: #{{ rgb['color0'] }};" />
+        <col span=1 style="background-color: #{{ rgb['color1'] }};" />
+        <col span=1 style="background-color: #{{ rgb['color2'] }};" />
+        <col span=1 style="background-color: #{{ rgb['color3'] }};" />
+        <col span=1 style="background-color: #{{ rgb['color4'] }};" />
+        <col span=1 style="background-color: #{{ rgb['color5'] }};" />
+        <col span=1 style="background-color: #{{ rgb['color6'] }};" />
+        <col span=1 style="background-color: #{{ rgb['color7'] }};" />
+
+        <thead>
+            <tr style="background-color: #{{ rgb['background'] }};">
+                <th>&nbsp;</th>
+                <th>&nbsp;</th>
+                <th>40m</th>
+                <th>41m</th>
+                <th>42m</th>
+                <th>43m</th>
+                <th>44m</th>
+                <th>45m</th>
+                <th>46m</th>
+                <th>47m</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for num,color in colors|dictsort %}
+                <tr style="color: #{{ rgb[color] }};">
+                    <td class="color-code" style="color: #{{ rgb['foreground'] }};">
+                        {{ code[color] }}
+                    </td>
+                    <td>{{ text }}</td>
+                    <td>{{ text }}</td>
+                    <td>{{ text }}</td>
+                    <td>{{ text }}</td>
+                    <td>{{ text }}</td>
+                    <td>{{ text }}</td>
+                    <td>{{ text }}</td>
+                    <td>{{ text }}</td>
+                    <td>{{ text }}</td>
+                </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+</div>
+{# template end #}

@@ -1,0 +1,10 @@
+{% extends "base.html" %}
+{% block title %}theme index{% endblock %}
+{% block content %}
+<div class="theme-container">
+    {% for theme in themes|sort %}
+        {% set loop_revindex = loop.revindex %}
+        {% include theme %}
+    {% endfor %}
+</div>
+{% endblock %}

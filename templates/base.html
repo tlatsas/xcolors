@@ -1,0 +1,14 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        {% block head %}
+        <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}" />
+        <title>{% block title %}{% endblock %} - xcolors.net</title>
+        {% endblock %}
+    </head>
+    <body>
+        <div id="content">{% block content %}{% endblock %}</div>
+        <div id="footer">
+        </div>
+    </body>
+</html>
