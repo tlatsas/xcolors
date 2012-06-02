@@ -4,7 +4,7 @@
 <div class="theme-container">
     {% for theme in themes|sort %}
         {% set loop_revindex = loop.revindex %}
-        {% include theme %}
+        {% include 'xcolors/{0}.html'.format(theme) %}
     {% endfor %}
 </div>
 {% endblock %}
