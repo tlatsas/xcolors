@@ -13,6 +13,23 @@ body {
     box-shadow: 0 3px 8px 3px #444444;
 }
 
+#header {
+    border-bottom: 1px solid #dddddd;
+}
+
+#content {
+    padding: 5px 0;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #dddddd;
+    overflow: hidden;
+}
+
+#footer {
+    clear: both;
+    border-top: 1px solid #ffffff;
+    padding: 2px 5px;
+}
+
 .theme-container {
     float: left;
     margin: 0.5em;
