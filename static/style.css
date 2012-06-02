@@ -1,7 +1,10 @@
-.theme {
-    margin: 0.5em;
-    padding: 1em;
+.theme-container {
     float: left;
+    margin: 0.5em;
+}
+
+.theme {
+    padding: 1em;
     font-size: 0.86em;
     font-family: 'monospace';
     border: 1px dashed gray;
