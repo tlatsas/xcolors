@@ -1,6 +1,6 @@
 # -*- coding: utf-8 -*-
 import os
-from flask import Flask, render_template
+from flask import Flask, render_template, send_from_directory
 from glob import glob
 
 app = Flask(__name__)
@@ -12,6 +12,11 @@ def index():
     themes = [os.path.splitext(os.path.basename(t))[0]
               for t in glob('{0}/*.html'.format(path))]
     return render_template('index.html', themes=themes)
+
+@app.route('/dl/<path:filename>')
+def download(filename):
+    return send_from_directory('color_files', filename,
+                               mimetype='text/plain')
 
 if __name__ == '__main__':
     from xcolor.generator import Generator
