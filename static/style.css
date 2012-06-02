@@ -9,6 +9,8 @@ body {
     padding: 1em;
     overflow: hidden;
     margin-top: 2em;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px 3px #444444;
 }
 
 .theme-container {
