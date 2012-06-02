@@ -21,7 +21,7 @@ if __name__ == '__main__':
     xcolor.generate_files()
 
     port = int(os.environ.get('PORT', 8080))
-    host = int(os.environ.get('HOST', '0.0.0.0'))
+    host = os.environ.get('HOST', '0.0.0.0')
     debug = os.environ.get('DEBUG') in ("true", "True")
 
     app.run(host=host, port=port, debug=debug)
