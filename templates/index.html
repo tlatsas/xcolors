@@ -1,10 +1,15 @@
 {% extends "base.html" %}
 {% block title %}theme index{% endblock %}
 {% block content %}
-<div class="theme-container">
+<div class="themes">
     {% for theme in themes|sort %}
         {% set loop_revindex = loop.revindex %}
-        {% include 'xcolors/{0}.html'.format(theme) %}
+        <div class="theme-container">
+            <a href="{{ url_for('download', filename=theme) }}">
+                download {{ theme }}
+            </a>
+            {% include 'xcolors/{0}.html'.format(theme) %}
+        </div>
     {% endfor %}
 </div>
 {% endblock %}
