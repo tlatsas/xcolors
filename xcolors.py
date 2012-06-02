@@ -10,7 +10,7 @@ def index():
     directory = os.path.dirname(__file__)
     path = os.path.join(directory, 'templates', 'xcolors')
     themes = [os.path.splitext(os.path.basename(t))[0]
-              for t in glob('./{0}/*.html'.format(path))]
+              for t in glob('{0}/*.html'.format(path))]
     return render_template('index.html', themes=themes)
 
 if __name__ == '__main__':
