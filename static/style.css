@@ -1,10 +1,17 @@
 body {
     background: url("img/bg.png") repeat scroll 0 0 transparent;
     font-family: "Helvetica", sans-serif;
+    color: #4c4c4c;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
 }
 
 a {
     text-decoration: none;
+    color: #6d6d6d;
+    outline: none;
+}
+a:hover {
+    color: #476C90;
 }
 
 #wrapper {
@@ -22,6 +29,7 @@ a {
     padding: 0 2em;
     border-bottom: 1px solid #dddddd;
     overflow: hidden;
+    font-weight: bold;
 }
 
 #header h1 {
@@ -56,6 +64,7 @@ a {
 .theme-container {
     float: left;
     margin: 0.5em;
+    text-shadow: none;
 }
 
 /* common rules for color themes */
