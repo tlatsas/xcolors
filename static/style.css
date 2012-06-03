@@ -58,6 +58,7 @@ a {
     margin: 0.5em;
 }
 
+/* common rules for color themes */
 .theme {
     padding: 1em;
     font-size: 0.9em;
@@ -65,7 +66,6 @@ a {
     border: 1px dashed gray;
 }
 
-/* common rules for color themes */
 .color-code {
     text-align: right !important;
 }
