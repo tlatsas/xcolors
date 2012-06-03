@@ -63,16 +63,23 @@ a:hover {
 
 .theme-container {
     float: left;
-    margin: 0.5em;
+    margin: 0.5em 0.5em 1em 0.5em;
     text-shadow: none;
+}
+
+.download {
+    background: url("img/down.png") no-repeat scroll;
+    padding-left: 1.2em;
+    line-height: 16px;
 }
 
 /* common rules for color themes */
 .theme {
     padding: 1em;
+    margin-top: 0.3em;
     font-size: 0.9em;
     font-family: monospace;
-    border: 1px dashed gray;
+    border: 1px solid black;
 }
 
 .color-code {

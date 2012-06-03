@@ -6,7 +6,7 @@
         {% set loop_revindex = loop.revindex %}
         <div class="theme-container">
             <a href="{{ url_for('download', filename=theme) }}">
-                download {{ theme }}
+                <span class="download">{{ theme }}</span>
             </a>
             {% include 'xcolors/{0}.html'.format(theme) %}
         </div>
