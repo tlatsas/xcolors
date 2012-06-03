@@ -33,6 +33,10 @@ a:hover {
     font-weight: bold;
 }
 
+#header a:hover {
+    text-shadow: none;
+}
+
 #header h1 {
     font-size: 2em;
     float: left;
