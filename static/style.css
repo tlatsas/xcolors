@@ -1,15 +1,97 @@
+body {
+    background: url("img/bg.png") repeat scroll 0 0 transparent;
+    font-family: "Helvetica", sans-serif;
+    color: #4c4c4c;
+    text-shadow: 0 1px 0 rgba(255, 255, 255, 0.75);
+}
+
+a {
+    text-decoration: none;
+    color: #6d6d6d;
+    outline: none;
+}
+a:hover {
+    color: #476C90;
+}
+
+#wrapper {
+    background-color: #eeeeee;
+    margin: 0 auto;
+    width: 960px;
+    padding: 1em;
+    overflow: hidden;
+    margin-top: 2em;
+    border-radius: 5px;
+    box-shadow: 0 3px 8px 3px #444444;
+}
+
+#header {
+    padding: 0 2em;
+    border-bottom: 1px solid #dddddd;
+    overflow: hidden;
+    font-weight: bold;
+}
+
+#header h1 {
+    font-size: 2em;
+    float: left;
+}
+
+#header ul {
+    list-style: none;
+    float: left;
+    line-height: 45px;
+}
+
+#header ul li {
+    display: inline;
+    padding-right: 2em;
+}
+
+#content {
+    padding: 5px 0;
+    border-top: 1px solid #ffffff;
+    border-bottom: 1px solid #dddddd;
+    overflow: hidden;
+}
+
+#footer {
+    clear: both;
+    border-top: 1px solid #ffffff;
+    padding: 2px 5px;
+}
+
 .theme-container {
     float: left;
-    margin: 0.5em;
+    margin: 0.5em 0.5em 1em 0.5em;
+    text-shadow: none;
 }
 
+.download {
+    background: url("img/down.png") no-repeat scroll;
+    padding-left: 1.2em;
+    line-height: 16px;
+}
+
+/* common rules for color themes */
 .theme {
     padding: 1em;
+    margin-top: 0.3em;
     font-size: 0.9em;
     font-family: monospace;
-    border: 1px dashed gray;
+    border: 1px solid black;
 }
 
-.color-code { text-align: right !important; }
-.t { border-bottom: 0px; border-collapse: collapse; }
-.t tr td { padding: 0em 1em; text-align: center; /*border-left: 5px solid;*/}
+.color-code {
+    text-align: right !important;
+}
+
+.t {
+    border-bottom: 0px;
+    border-collapse: collapse;
+}
+
+.t tr td {
+    padding: 0em 1em;
+    text-align: center;
+}
