@@ -2,6 +2,10 @@ body {
     background: url("img/bg.png") repeat scroll 0 0 transparent;
 }
 
+a {
+    text-decoration: none;
+}
+
 #wrapper {
     background-color: #eeeeee;
     margin: 0 auto;
@@ -14,7 +18,25 @@ body {
 }
 
 #header {
+    padding: 0 2em;
     border-bottom: 1px solid #dddddd;
+    overflow: hidden;
+}
+
+#header h1 {
+    font-size: 2em;
+    float: left;
+}
+
+#header ul {
+    list-style: none;
+    float: left;
+    line-height: 45px;
+}
+
+#header ul li {
+    display: inline;
+    padding-right: 2em;
 }
 
 #content {
