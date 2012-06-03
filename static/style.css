@@ -1,5 +1,6 @@
 body {
     background: url("img/bg.png") repeat scroll 0 0 transparent;
+    font-family: "Helvetica", sans-serif;
 }
 
 a {
