@@ -15,13 +15,13 @@ def index():
 
 @app.route('/dl/<path:filename>')
 def download(filename):
-    return send_from_directory('color_files', filename,
+    return send_from_directory('themes', filename,
                                mimetype='text/plain')
 
 if __name__ == '__main__':
     from xcolor.generator import Generator
     path = os.path.dirname(__file__)
-    xcolor = Generator(os.path.join(path, 'color_files'),
+    xcolor = Generator(os.path.join(path, 'themes'),
                        os.path.join(path, 'templates', 'xcolors'))
     xcolor.generate_files()
 
