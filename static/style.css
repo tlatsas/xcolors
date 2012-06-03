@@ -12,6 +12,7 @@ a {
 }
 a:hover {
     color: #476C90;
+    text-shadow: 0.1em 0.1em 0.1em rgba(0, 0, 0, 0.1);
 }
 
 #wrapper {
