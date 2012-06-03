@@ -3,8 +3,8 @@
 !  http://metawire.org/~rezza/index.php
 !============================
 
-!*foreground:     rgb:dd/dd/dd
-!*background:     rgb:22/22/22
+*foreground:     rgb:dd/dd/dd
+*background:     rgb:22/22/22
 !black
 *color0:         rgb:19/19/19
 *color8:         rgb:25/25/25
