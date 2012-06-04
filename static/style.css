@@ -60,6 +60,11 @@ a:hover {
     overflow: hidden;
 }
 
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+}
+
 #footer {
     clear: both;
     border-top: 1px solid #ffffff;
