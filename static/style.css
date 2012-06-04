@@ -6,7 +6,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #6d6d6d;
     outline: none;
 }
@@ -35,6 +35,10 @@ a:hover {
 
 #header a:hover {
     text-shadow: none;
+}
+
+#header a {
+    text-decoration: none;
 }
 
 #header h1 {
@@ -81,6 +85,9 @@ h2 {
     text-shadow: none;
 }
 
+.theme-container a {
+    text-decoration: none;
+}
 .download {
     background: url("img/down.png") no-repeat scroll;
     padding-left: 1.2em;
