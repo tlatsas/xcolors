@@ -65,6 +65,10 @@ h2 {
     font-weight: normal;
 }
 
+.bold {
+    font-weight: bold;
+}
+
 #footer {
     clear: both;
     border-top: 1px solid #ffffff;
