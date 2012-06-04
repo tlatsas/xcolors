@@ -22,6 +22,10 @@ def download(filename):
 def about():
     return render_template('about.html')
 
+@app.route('/contribute')
+def contribute():
+    return render_template('contribute.html')
+
 
 if __name__ == '__main__':
     from xcolor.generator import Generator
