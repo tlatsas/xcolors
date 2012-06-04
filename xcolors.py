@@ -18,6 +18,15 @@ def download(filename):
     return send_from_directory('themes', filename,
                                mimetype='text/plain')
 
+@app.route('/about')
+def about():
+    return render_template('about.html')
+
+@app.route('/contribute')
+def contribute():
+    return render_template('contribute.html')
+
+
 if __name__ == '__main__':
     from xcolor.generator import Generator
     path = os.path.dirname(__file__)

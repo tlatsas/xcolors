@@ -6,7 +6,7 @@ body {
 }
 
 a {
-    text-decoration: none;
+    text-decoration: underline;
     color: #6d6d6d;
     outline: none;
 }
@@ -37,6 +37,10 @@ a:hover {
     text-shadow: none;
 }
 
+#header a {
+    text-decoration: none;
+}
+
 #header h1 {
     font-size: 2em;
     float: left;
@@ -60,6 +64,15 @@ a:hover {
     overflow: hidden;
 }
 
+h2 {
+    font-size: 2em;
+    font-weight: normal;
+}
+
+.bold {
+    font-weight: bold;
+}
+
 #footer {
     clear: both;
     border-top: 1px solid #ffffff;
@@ -68,10 +81,13 @@ a:hover {
 
 .theme-container {
     float: left;
-    margin: 0.5em 0.5em 1em 0.5em;
+    margin: 0.5em 1.2em 1em 1.2em;
     text-shadow: none;
 }
 
+.theme-container a {
+    text-decoration: none;
+}
 .download {
     background: url("img/down.png") no-repeat scroll;
     padding-left: 1.2em;
@@ -82,8 +98,8 @@ a:hover {
 .theme {
     padding: 1em;
     margin-top: 0.3em;
-    font-size: 0.9em;
-    font-family: monospace;
+    font-size: 10px;
+    font-family: 'monospace', monospace;
     border: 1px solid black;
 }
 
