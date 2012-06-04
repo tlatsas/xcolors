@@ -4,7 +4,7 @@ About
 This is the source code that powers [xcolors.net](http://xcolors.net). Xcolors.net is a color theme
 directory for terminals that support color configuration through
 [X resources](http://en.wikipedia.org/wiki/X_resources). It provides a visual presentation of the themes
-and will hopefully [grow over time](https://github.com/tlatsas/xcolors#Contribute) with help from
+and will hopefully [grow over time](https://github.com/tlatsas/xcolors#contribute) with help from
 the community :).
 
 
