@@ -4,7 +4,7 @@ About
 This is the source code that powers [xcolors.net](http://xcolors.net). Xcolors.net is a color theme
 directory for terminals that support color configuration through
 [X resources](http://en.wikipedia.org/wiki/X_resources). It provides a visual presentation of the themes
-and will hopefully [grow over time](https://github.com/tlatsas/xcolors#Contribute) with help from
+and will hopefully [grow over time](https://github.com/tlatsas/xcolors#contribute) with help from
 the community :).
 
 
@@ -59,3 +59,23 @@ The files (themes) that reside in the `themes` folder of the root directory are 
 theme file, a corresponding html file is generated using the [Jinja2](http://jinja.pocoo.org/) engine in
 the `templates/xcolors` folder. These files are imported later by the `templates/index.html` template,
 when the main page is requested.
+
+
+Local install
+-------------
+
+Navigate in the project's root directory and create the python virtual environment using `virtualenv`:
+
+    $ virtualenv venv --distribute
+
+Then activate it:
+
+    $ source venv/bin/activate
+
+Intall dependencies using pip:
+
+    $ pip install -r requirements.txt
+
+Run using `python xcolors.py` or better use heroku's `foreman` which will honor the Procfile contents.
+
+    $ foreman start
