@@ -35,17 +35,7 @@ class Generator(object):
         'color15': '1;37m'
     }
 
-    #bg_code_map = {
-    #    'color0': '40m',
-    #    'color1': '41m',
-    #    'color2': '42m',
-    #    'color3': '43m',
-    #    'color4': '44m',
-    #    'color5': '45m',
-    #    'color6': '46m',
-    #    'color7': '47m'
-    #}
-
+    # available color names
     colors = {
         0: 'color0',
         1: 'color8',
@@ -65,6 +55,7 @@ class Generator(object):
         15: 'color15'
     }
 
+    # default foreground/backgroud values for themes that do not specify them
     default_fg = 'dcdcdc'
     default_bg = '1c1c1c'
 
@@ -157,8 +148,7 @@ class Generator(object):
                 continue
 
 
-
 if __name__ == '__main__':
-    print "This is not intented to run stand-alone, import to use"
+    print "Import to use, not intented to run standalone."
     sys.exit(1)
 
