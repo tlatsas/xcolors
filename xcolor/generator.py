@@ -144,11 +144,11 @@ class Generator(object):
                 os.remove(os.path.join(self.output_folder,
                                        "{0}.html".format(theme)))
             except os.error:
-                print "Cannot remove generated file for theme: {0}".format(theme)
+                print("Cannot remove generated file for theme: {0}".format(theme))
                 continue
 
 
 if __name__ == '__main__':
-    print "Import to use, not intented to run standalone."
+    print("Import to use, not intented to run standalone.")
     sys.exit(1)
 
