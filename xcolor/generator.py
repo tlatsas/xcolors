@@ -68,8 +68,8 @@ class Generator(object):
     default_fg = 'dcdcdc'
     default_bg = '1c1c1c'
 
-    def __init__(self, color_folder, output_folder, text='txt'):
-        self.color_folder = color_folder
+    def __init__(self, theme_folder, output_folder, text='txt'):
+        self.theme_folder = theme_folder
         self.output_folder = output_folder
         self.text = text
 
@@ -83,7 +83,7 @@ class Generator(object):
             print("Error opening template file for reading")
         self.tpl = Template(tpl_contents)
 
-    def _parse_color_file(self, f):
+    def _parse_theme_file(self, f):
         contents = {}
 
         # this filters only valid lines
@@ -120,7 +120,7 @@ class Generator(object):
                     contents[match.group('name')] = match.group('value')
         return contents
 
-    def _write_snippet_file(self, name, rgb):
+    def _write_html_file(self, name, rgb):
         if 'foreground' not in rgb.keys():
             rgb['foreground'] = self.default_fg
 
@@ -134,10 +134,10 @@ class Generator(object):
                                     text=self.text, code=self.code))
 
     def generate_files(self):
-        for color_file in os.listdir(self.color_folder):
-            with open(os.path.join(self.color_folder, color_file), 'r') as f:
-                rgb = self._parse_color_file(f)
-            self._write_snippet_file(color_file, rgb)
+        for theme in os.listdir(self.theme_folder):
+            with open(os.path.join(self.theme_folder, theme), 'r') as f:
+                rgb = self._parse_theme_file(f)
+            self._write_html_file(theme, rgb)
         return glob("{0}/*.html".format(self.output_folder.rstrip('/')))
 
     def cleanup(self):
