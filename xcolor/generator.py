@@ -70,7 +70,7 @@ class Generator(object):
             print("Error reading from path: {0}".format(self.theme_folder))
 
         # load template passed in jinja2
-        path, name = os.path.split(__file__)
+        path = os.path.dirname(__file__)
         tpl = os.path.join(path, 'template')
         try:
             with open(tpl, 'r') as f:
