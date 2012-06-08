@@ -73,6 +73,11 @@ class Generator(object):
         self.output_folder = output_folder
         self.text = text
 
+        try:
+            self.themes = os.listdir(self.theme_folder)
+        except os.error:
+            print("Error reading from path: {0}".format(self.theme_folder))
+
         # load template passed in jinja2
         path, name = os.path.split(__file__)
         tpl = os.path.join(path, 'template')
@@ -134,7 +139,7 @@ class Generator(object):
                                     text=self.text, code=self.code))
 
     def generate_files(self):
-        for theme in os.listdir(self.theme_folder):
+        for theme in self.themes:
             with open(os.path.join(self.theme_folder, theme), 'r') as f:
                 rgb = self._parse_theme_file(f)
             self._write_html_file(theme, rgb)
