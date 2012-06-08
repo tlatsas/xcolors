@@ -146,7 +146,16 @@ class Generator(object):
         return glob("{0}/*.html".format(self.output_folder.rstrip('/')))
 
     def cleanup(self):
-        raise NotImplemented
+        themes_html = [os.path.basename(os.path.splitext(t)[0]) for t in
+            glob("{0}/*.html".format(self.output_folder.rstrip('/')))]
+        for theme in [t for t in themes_html if t not in self.themes]:
+            try:
+                os.remove(os.path.join(self.output_folder,
+                                       "{0}.html".format(theme)))
+            except os.error:
+                print "Cannot remove generated file for theme: {0}".format(theme)
+                continue
+
 
 
 if __name__ == '__main__':
