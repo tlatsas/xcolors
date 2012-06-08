@@ -32,6 +32,7 @@ if __name__ == '__main__':
     path = os.path.dirname(__file__)
     xcolor = Generator(os.path.join(path, 'themes'),
                        os.path.join(path, 'templates', 'xcolors'))
+    xcolor.cleanup()
     xcolor.generate_files()
 
     port = int(os.environ.get('PORT', 8080))
