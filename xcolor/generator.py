@@ -127,9 +127,13 @@ class Generator(object):
 
         # append extension to theme filename
         name = '.'.join((name, 'html'))
-        with open(os.path.join(self.output_folder, name), 'w') as f:
-            f.write(self.tpl.render(rgb=rgb, colors=self.colors,
-                                    text=self.text, code=self.code))
+        try:
+            with open(os.path.join(self.output_folder, name), 'w') as f:
+                f.write(self.tpl.render(rgb=rgb, colors=self.colors,
+                                        text=self.text, code=self.code))
+        except IOError:
+            print("Cannot write html file for theme: {0}".format(name))
+            pass
 
     def generate_files(self):
         for theme in self.themes:
