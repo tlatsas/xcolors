@@ -68,6 +68,7 @@ class Generator(object):
             self.themes = os.listdir(self.theme_folder)
         except os.error:
             print("Error reading from path: {0}".format(self.theme_folder))
+            sys.exit(1)
 
         # load template passed in jinja2
         path = os.path.dirname(__file__)
@@ -77,6 +78,7 @@ class Generator(object):
                 tpl_contents = f.read()
         except IOError:
             print("Error opening template file for reading")
+            sys.exit(1)
         self.tpl = Template(tpl_contents)
 
     def _parse_theme_file(self, f):
