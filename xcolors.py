@@ -31,6 +31,10 @@ def html_path(theme):
     """return relative path of html file for given theme"""
     return "xcolors/{0}.html".format(theme)
 
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
+
 if __name__ == '__main__':
     from xcolor.generator import Generator
     path = os.path.dirname(__file__)
