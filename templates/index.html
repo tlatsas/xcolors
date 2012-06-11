@@ -8,7 +8,7 @@
             <a href="{{ url_for('download', filename=theme) }}">
                 <span class="download">{{ theme }}</span>
             </a>
-            {% include 'xcolors/{0}.html'.format(theme) %}
+            {% include theme|html_path %}
         </div>
     {% endfor %}
 </div>

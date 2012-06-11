@@ -26,6 +26,10 @@ def about():
 def contribute():
     return render_template('contribute.html')
 
+@app.template_filter()
+def html_path(theme):
+    """return relative path of html file for given theme"""
+    return "xcolors/{0}.html".format(theme)
 
 if __name__ == '__main__':
     from xcolor.generator import Generator
