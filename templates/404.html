@@ -1,0 +1,9 @@
+{% extends "base.html" %}
+{% block title %}page not found{% endblock %}
+{% block content %}
+<h2>Page not found</h2>
+<div>
+    <p>The requested page cannot be found.</p>
+    <p><a href="{{ url_for('index') }}">&larr; back to theme index</a></p>
+</div>
+{% endblock %}
