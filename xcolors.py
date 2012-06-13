@@ -26,12 +26,21 @@ def about():
 def contribute():
     return render_template('contribute.html')
 
+@app.template_filter()
+def html_path(theme):
+    """return relative path of html file for given theme"""
+    return "xcolors/{0}.html".format(theme)
+
+@app.errorhandler(404)
+def page_not_found(e):
+    return render_template('404.html'), 404
 
 if __name__ == '__main__':
     from xcolor.generator import Generator
     path = os.path.dirname(__file__)
     xcolor = Generator(os.path.join(path, 'themes'),
                        os.path.join(path, 'templates', 'xcolors'))
+    xcolor.cleanup()
     xcolor.generate_files()
 
     port = int(os.environ.get('PORT', 8080))

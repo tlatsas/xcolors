@@ -35,17 +35,7 @@ class Generator(object):
         'color15': '1;37m'
     }
 
-    #bg_code_map = {
-    #    'color0': '40m',
-    #    'color1': '41m',
-    #    'color2': '42m',
-    #    'color3': '43m',
-    #    'color4': '44m',
-    #    'color5': '45m',
-    #    'color6': '46m',
-    #    'color7': '47m'
-    #}
-
+    # available color names
     colors = {
         0: 'color0',
         1: 'color8',
@@ -65,25 +55,33 @@ class Generator(object):
         15: 'color15'
     }
 
+    # default foreground/backgroud values for themes that do not specify them
     default_fg = 'dcdcdc'
     default_bg = '1c1c1c'
 
-    def __init__(self, color_folder, output_folder, text='txt'):
-        self.color_folder = color_folder
+    def __init__(self, theme_folder, output_folder, text='txt'):
+        self.theme_folder = theme_folder
         self.output_folder = output_folder
         self.text = text
 
+        try:
+            self.themes = os.listdir(self.theme_folder)
+        except os.error:
+            print("Error reading from path: {0}".format(self.theme_folder))
+            sys.exit(1)
+
         # load template passed in jinja2
-        path, name = os.path.split(__file__)
+        path = os.path.dirname(__file__)
         tpl = os.path.join(path, 'template')
         try:
             with open(tpl, 'r') as f:
                 tpl_contents = f.read()
         except IOError:
             print("Error opening template file for reading")
+            sys.exit(1)
         self.tpl = Template(tpl_contents)
 
-    def _parse_color_file(self, f):
+    def _parse_theme_file(self, f):
         contents = {}
 
         # this filters only valid lines
@@ -120,7 +118,7 @@ class Generator(object):
                     contents[match.group('name')] = match.group('value')
         return contents
 
-    def _write_snippet_file(self, name, rgb):
+    def _write_html_file(self, name, rgb):
         if 'foreground' not in rgb.keys():
             rgb['foreground'] = self.default_fg
 
@@ -129,22 +127,34 @@ class Generator(object):
 
         # append extension to theme filename
         name = '.'.join((name, 'html'))
-        with open(os.path.join(self.output_folder, name), 'w') as f:
-            f.write(self.tpl.render(rgb=rgb, colors=self.colors,
-                                    text=self.text, code=self.code))
+        try:
+            with open(os.path.join(self.output_folder, name), 'w') as f:
+                f.write(self.tpl.render(rgb=rgb, colors=self.colors,
+                                        text=self.text, code=self.code))
+        except IOError:
+            print("Cannot write html file for theme: {0}".format(name))
+            pass
 
     def generate_files(self):
-        for color_file in os.listdir(self.color_folder):
-            with open(os.path.join(self.color_folder, color_file), 'r') as f:
-                rgb = self._parse_color_file(f)
-            self._write_snippet_file(color_file, rgb)
+        for theme in self.themes:
+            with open(os.path.join(self.theme_folder, theme), 'r') as f:
+                rgb = self._parse_theme_file(f)
+            self._write_html_file(theme, rgb)
         return glob("{0}/*.html".format(self.output_folder.rstrip('/')))
 
     def cleanup(self):
-        raise NotImplemented
+        themes_html = [os.path.basename(os.path.splitext(t)[0]) for t in
+            glob("{0}/*.html".format(self.output_folder.rstrip('/')))]
+        for theme in [t for t in themes_html if t not in self.themes]:
+            try:
+                os.remove(os.path.join(self.output_folder,
+                                       "{0}.html".format(theme)))
+            except os.error:
+                print("Cannot remove generated file for theme: {0}".format(theme))
+                continue
 
 
 if __name__ == '__main__':
-    print "This is not intented to run stand-alone, import to use"
+    print("Import to use, not intented to run standalone.")
     sys.exit(1)
 
