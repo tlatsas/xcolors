@@ -1,0 +1,24 @@
+!   black / dark gray
+URxvt*color0: #757575
+URxvt*color8: #B8B8B8
+!   red
+URxvt*color1: #FF5F5F
+URxvt*color9: #D78787
+!   green
+URxvt*color2: #DE8A36
+URxvt*color10: #FF9F6F
+!   yellow
+URxvt*color3: #D78787
+URxvt*color11: #FF5F5F
+!   blue
+URxvt*color4: #AF5FD7
+URxvt*color12: #DEA3E5
+!   magenta
+URxvt*color5: #FF87D7
+URxvt*color13: #D7AFAF
+!   cyan
+URxvt*color6: #DEA3E5
+URxvt*color14: #AF5FD7
+!   light gray / white
+URxvt*color7: #B8B8B8
+URxvt*color15: #757575

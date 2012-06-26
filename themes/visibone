@@ -1,0 +1,31 @@
+!BLK
+URxvt*color0:             #666666
+URxvt*color8:             #999999
+
+!RED
+URxvt*color1:             #CC6666
+URxvt*color9:           #FF9999
+
+!GRN
+URxvt*color2:             #66CC99
+URxvt*color10:            #99FFCC
+
+!YEL
+URxvt*color3:             #CC9966
+URxvt*color11:            #FFCC99
+
+!BLE
+URxvt*color4:             #6699CC
+URxvt*color12:            #99CCFF
+
+!MAG
+URxvt*color5:             #CC6699
+URxvt*color13:            #FF99CC
+
+!CYN
+URxvt*color6:             #66CCCC
+URxvt*color14:            #99FFFF
+
+!WHT
+URxvt*color7:             #CCCCCC
+URxvt*color15:            #FFFFFF
