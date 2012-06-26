@@ -1,30 +1,30 @@
-URxvt*color0:         #658280
-URxvt*color8:         #8ca8a6
+*color0:         #658280
+*color8:         #8ca8a6
 
 !!RED
-URxvt*color1:         #822f5d
-URxvt*color9:         #a24b76
+*color1:         #822f5d
+*color9:         #a24b76
 
 !!GREEN
-URxvt*color2:         #184a31
-URxvt*color10:        #28634d
+*color2:         #184a31
+*color10:        #28634d
 
 !!YELLOW
-URxvt*color3:         #9d4500
-URxvt*color11:        #9d5823
+*color3:         #9d4500
+*color11:        #9d5823
 
 !!BLUE
-URxvt*color4:         #304465
-URxvt*color12:        #415c77
+*color4:         #304465
+*color12:        #415c77
 
 !!MAGENTA
-URxvt*color5:         #330801
-URxvt*color13:        #532706
+*color5:         #330801
+*color13:        #532706
 
 !CYAN
-URxvt*color6:         #175552
-URxvt*color14:        #3a6868
+*color6:         #175552
+*color14:        #3a6868
 
 !WHITE
-URxvt*color7:         #110005
-URxvt*color15:        #330801
+*color7:         #110005
+*color15:        #330801

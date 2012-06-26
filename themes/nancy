@@ -23,7 +23,7 @@
   must when you're going to play with the utilities and libraries described
   below.
 
-  urxvt doesn't support redefining of anything but ANSI colors,  but I have
+   doesn't support redefining of anything but ANSI colors,  but I have
   patched [0] her to allow for modification of the full 256 color table.
 
   If you'd want to create your own colorschemes, or if you need to set colors
