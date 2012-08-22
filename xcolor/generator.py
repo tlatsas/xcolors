@@ -91,14 +91,14 @@ class Generator(object):
         # eg:
         #   *color4: rgb:ff/ff/ff
         rgb = re.compile(
-                r'^\*(?P<name>[a-zA-Z]+\d{,2}):'\
+                r'^\*\.*(?P<name>[a-zA-Z]+\d{,2}):'\
                         '[ \t\n\r\f\v]*rgb:(?P<value>[a-zA-Z0-9/]*)')
 
         # matches lines with hex values
         # eg:
         #   *color4: #ffffff
         hexadecimal = re.compile(
-                r'^\*(?P<name>[a-zA-Z]+\d{,2}):'\
+                r'^\*\.*(?P<name>[a-zA-Z]+\d{,2}):'\
                         '[ \t\n\r\f\v]*#(?P<value>[a-zA-Z0-9]{6})')
 
         for line in f:
