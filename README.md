@@ -33,11 +33,14 @@ Contribute
 5.  Changes will show at the [xcolors site](http://xcolors.net) as soon as I push
     the chages back at the heroku deployment.
 
+6.  You make it to the [hall of fame](https://github.com/tlatsas/xcolors/contributors).
+
 
 Supported formats
 -----------------
 
 Both files using rgb `*color0: rgb:19/19/19` and hash `*color0: #2e3436` notation are supported.
+Lines starting with "URxvt" are also supported.
 
 
 Supported keyworks
