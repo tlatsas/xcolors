@@ -85,24 +85,28 @@ class Generator(object):
         contents = {}
 
         # this filters only valid lines
-        valid = re.compile(r'^\*|^\s*\*!')
+        # line starting with '*' or '*' with whitespace prepended are valid
+        # also, lines starting with "Urxvt*" are valid
+        valid = re.compile(r'^\s*[a-zA-Z]*\*')
 
         # matches lines with rgb values
         # eg:
         #   *color4: rgb:ff/ff/ff
+        #   Urxvt*color4: rgb:ff/ff/ff
         rgb = re.compile(
-                r'^\*\.*(?P<name>[a-zA-Z]+\d{,2}):'\
-                        '[ \t\n\r\f\v]*rgb:(?P<value>[a-zA-Z0-9/]*)')
+                r'(?:^\*|^\w*\*)\.*(?P<name>[a-zA-Z]+\d{,2})\s*:\s*'\
+                        'rgb:(?P<value>[a-zA-Z0-9/]*)')
 
         # matches lines with hex values
         # eg:
         #   *color4: #ffffff
+        #   Urxvt*color4: #ffffff
         hexadecimal = re.compile(
-                r'^\*\.*(?P<name>[a-zA-Z]+\d{,2}):'\
-                        '[ \t\n\r\f\v]*#(?P<value>[a-zA-Z0-9]{6})')
+                r'(?:^\*|^\w*\*)\.*(?P<name>[a-zA-Z]+\d{,2})\s*:\s*'\
+                        '#(?P<value>[a-zA-Z0-9]{6})')
 
         for line in f:
-            # make regex easier
+            # regex matching is easier by stripping leading/trailing whitespace
             line = line.strip()
 
             if valid.match(line):
