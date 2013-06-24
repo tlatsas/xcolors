@@ -86,23 +86,25 @@ class Generator(object):
 
         # this filters only valid lines
         # line starting with '*' or '*' with whitespace prepended are valid
-        # also, lines starting with "Urxvt*" are valid
-        valid = re.compile(r'^\s*[a-zA-Z]*\*')
+        # also, lines starting with "Urxvt*" "Urxvt." are valid
+        valid = re.compile(r'^\s*[a-zA-Z]*[\*\.]')
 
         # matches lines with rgb values
         # eg:
         #   *color4: rgb:ff/ff/ff
         #   Urxvt*color4: rgb:ff/ff/ff
+        #   Urxvt.color4: rgb:ff/ff/ff
         rgb = re.compile(
-                r'(?:^\*|^\w*\*)\.*(?P<name>[a-zA-Z]+\d{,2})\s*:\s*'\
+                r'(?:^\*|^\w*[\*\.])\.*(?P<name>[a-zA-Z]+\d{,2})\s*:\s*'\
                         'rgb:(?P<value>[a-zA-Z0-9/]*)')
 
         # matches lines with hex values
         # eg:
         #   *color4: #ffffff
         #   Urxvt*color4: #ffffff
+        #   Urxvt.color4: #ffffff
         hexadecimal = re.compile(
-                r'(?:^\*|^\w*\*)\.*(?P<name>[a-zA-Z]+\d{,2})\s*:\s*'\
+                r'(?:^\*|^\w*[\*\.])\.*(?P<name>[a-zA-Z]+\d{,2})\s*:\s*'\
                         '#(?P<value>[a-zA-Z0-9]{6})')
 
         for line in f:
