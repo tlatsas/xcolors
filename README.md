@@ -40,7 +40,7 @@ Supported formats
 -----------------
 
 Both files using rgb `*color0: rgb:19/19/19` and hash `*color0: #2e3436` notation are supported.
-Lines starting with "URxvt" are also supported.
+Also lines starting with `URxvt*` and `URxvt.` are supported.
 
 
 Supported keyworks
