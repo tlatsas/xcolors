@@ -4,6 +4,7 @@ import os
 import sys
 from jinja2 import Template
 from glob import glob
+from .xparser import Xparser
 
 class Generator(object):
 
@@ -84,44 +85,21 @@ class Generator(object):
     def _parse_theme_file(self, f):
         contents = {}
 
-        # this filters only valid lines
-        # line starting with '*' or '*' with whitespace prepended are valid
-        # also, lines starting with "Urxvt*" "Urxvt." are valid
-        valid = re.compile(r'^\s*[a-zA-Z]*[\*\.]')
-
-        # matches lines with rgb values
-        # eg:
-        #   *color4: rgb:ff/ff/ff
-        #   Urxvt*color4: rgb:ff/ff/ff
-        #   Urxvt.color4: rgb:ff/ff/ff
-        rgb = re.compile(
-                r'(?:^\*|^\w*[\*\.])\.*(?P<name>[a-zA-Z]+\d{,2})\s*:\s*'\
-                        'rgb:(?P<value>[a-zA-Z0-9/]*)')
-
-        # matches lines with hex values
-        # eg:
-        #   *color4: #ffffff
-        #   Urxvt*color4: #ffffff
-        #   Urxvt.color4: #ffffff
-        hexadecimal = re.compile(
-                r'(?:^\*|^\w*[\*\.])\.*(?P<name>[a-zA-Z]+\d{,2})\s*:\s*'\
-                        '#(?P<value>[a-zA-Z0-9]{6})')
-
         for line in f:
             # regex matching is easier by stripping leading/trailing whitespace
             line = line.strip()
 
-            if valid.match(line):
+            if Xparser.valid(line):
                 # try matchig a line with rgb values
-                match = rgb.match(line)
+                match = Xparser.rgb(line)
                 if match:
-                    contents[match.group('name')] = match.group('value').replace('/', '')
+                    contents[match['name']] = match['value']
                     continue
 
                 # rgb match failed, try with hex
-                match = hexadecimal.match(line)
+                match = Xparser.hex(line)
                 if match:
-                    contents[match.group('name')] = match.group('value')
+                    contents[match['name']] = match['value']
         return contents
 
     def _write_html_file(self, name, rgb):
