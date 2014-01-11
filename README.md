@@ -83,6 +83,10 @@ Run using `python xcolors.py` or better use heroku's `foreman` which will honor 
 
     $ foreman start
 
+Run the tests with:
+
+    $ python -m unittest discover
+
 
 License
 -------
