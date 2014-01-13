@@ -6,8 +6,12 @@ install:
 script:
   - python -m unittest
 email:
-    on_success: change
-    on_failure: change
+  on_success: change
+  on_failure: change
+branches:
+  only:
+    - master
+    - development
 deploy:
   provider: heroku
   api_key:
