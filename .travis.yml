@@ -1,10 +1,7 @@
 language: python
 python:
-  - 2.7
-install:
-  - pip install -r requirements.txt
-script:
-  - python -m unittest
+  - "2.7"
+script: "python -m unittest discover"
 email:
   on_success: change
   on_failure: change
@@ -14,9 +11,9 @@ branches:
     - development
 deploy:
   provider: heroku
+  app: xcolors
   api_key:
     secure: Q7Qiyiqc9PsE/VJgRteWmU2axTiIx+lM1nI3jyX0w3aHfCZMX98VvNePvRSbSLHDdqBA+nSf4vq2HW1feW3kcR7mFzT3C7gNadZtEO9XG+JnMKUPS3EyyzlQYxBStYo8ET1B5EyK+r1ACa0QVravNToiINYprCwPup96WahLmZI=
-  app: xcolors
   on:
-    repo: tlatsas/xcolors
     branch: master
+    repo: tlatsas/xcolors
