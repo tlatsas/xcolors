@@ -14,6 +14,7 @@ deploy:
   app: xcolors
   api_key:
     secure: Q7Qiyiqc9PsE/VJgRteWmU2axTiIx+lM1nI3jyX0w3aHfCZMX98VvNePvRSbSLHDdqBA+nSf4vq2HW1feW3kcR7mFzT3C7gNadZtEO9XG+JnMKUPS3EyyzlQYxBStYo8ET1B5EyK+r1ACa0QVravNToiINYprCwPup96WahLmZI=
+  skip_cleanup: true
   on:
     branch: master
     repo: tlatsas/xcolors
