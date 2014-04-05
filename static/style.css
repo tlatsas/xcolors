@@ -116,3 +116,8 @@ h2 {
     padding: 0em 1em;
     text-align: center;
 }
+
+#gittip {
+    float: right;
+    padding-top: 25px;
+}
