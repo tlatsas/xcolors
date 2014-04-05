@@ -1,3 +1,5 @@
+[![Build Status](https://travis-ci.org/tlatsas/xcolors.svg?branch=master)](https://travis-ci.org/tlatsas/xcolors)
+
 About
 -----
 
