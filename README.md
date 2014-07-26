@@ -14,7 +14,7 @@ How to use these themes
 -----------------------
 
 Download and use the `#include` directive in your `.Xdefaults` or `.Xresources` files. Then load/reload
-using the `xrdb` utility. Some information is provided [here](http://kb.mit.edu/confluence/pages/viewpage.action?pageId=3907291).
+using the `xrdb` utility. For more information see [here](http://kb.mit.edu/confluence/pages/viewpage.action?pageId=3907291).
 
 E.g.:
 
@@ -28,24 +28,25 @@ Contribute
 
 2.  Add your theme file(s) in the `themes` folder found in the project's root directory.
 
-3.  Commit the newly added files.
+3.  Commit your changes.
 
-4.  Make a pull request.
+4.  If you make changes to the source code make sure the tests are green.
 
-5.  Changes will show at the [xcolors site](http://xcolors.net) as soon as I push
-    the chages back at the heroku deployment.
+5.  Make a pull request (make sure you are *not* on Master branch)
 
-6.  You make it to the [hall of fame](https://github.com/tlatsas/xcolors/contributors).
+6.  Changes will show at the [xcolors site](http://xcolors.net) as soon as the PR is merged to the master branch.
+
+7.  You make it to the [hall of fame](https://github.com/tlatsas/xcolors/contributors).
 
 
 Supported formats
 -----------------
 
 Both files using rgb `*color0: rgb:19/19/19` and hash `*color0: #2e3436` notation are supported.
-Also lines starting with `URxvt*` and `URxvt.` are supported.
+Lines starting with `URxvt*` and `URxvt.` are also supported.
 
 
-Supported keyworks
+Supported keywords
 ------------------
 
 Keywords: `*color` (from 0 to 15), `*background`, and `*foreground` are supported.
@@ -69,13 +70,13 @@ when the main page is requested.
 Local install
 -------------
 
-Navigate in the project's root directory and create the python virtual environment using `virtualenv`:
+Navigate in the project's root directory and create the python virtual environment using `mkvirtualenv`:
 
-    $ virtualenv venv --distribute
+    $ mkvirtualenv -p /path/to/pyhon2 xcolors
 
 Then activate it:
 
-    $ source venv/bin/activate
+    $ workon xcolors
 
 Intall dependencies using pip:
 
