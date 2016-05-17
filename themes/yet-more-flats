@@ -1,0 +1,36 @@
+!yet-more-flats theme by thecrimulo
+
+*background:       #302B2C
+*foreground:       #F5F5F5
+
+!Black
+*color0:           #050404
+*color8:           #B6B6B6
+
+!Red
+*color1:           #EC6853
+*color9:           #ED8E68
+
+!Green
+*color2:           #27B55C
+*color10:          #A0CD34
+
+!Yellow
+*color3:           #FFD342
+*color11:          #F3F275
+
+!Blue
+*color4:           #555FA1
+*color12:          #4493DB
+
+!Magenta
+*color5:           #8F29AD
+*color13:          #D3469F
+
+!Cyan
+*color6:           #11ACB1
+*color14:          #52D6A6
+
+!White
+*color7:           #F5F5F5
+*color15:          #F2F1F0
