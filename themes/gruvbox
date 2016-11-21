@@ -1,0 +1,53 @@
+! foreground
+xterm*foreground: rgb:eb/db/b2
+
+! background
+xterm*background: rgb:28/28/28
+
+! black
+xterm*color0: rgb:1d/20/21
+
+! red
+xterm*color1: rgb:cc/24/1d
+
+! green
+xterm*color2: rgb:98/97/1a
+
+! orange
+xterm*color3: rgb:d6/5d/0e
+
+! blue
+xterm*color4: rgb:45/85/88
+
+! purple
+xterm*color5: rgb:b1/62/86
+
+! teal
+xterm*color6: rgb:68/9d/6a
+
+! gray
+xterm*color7: rgb:92/83/74
+
+! dark gray
+xterm*color8: rgb:50/49/45
+
+! light red
+xterm*color9: rgb:fb/49/34
+
+! light green
+xterm*color10: rgb:b8/bb/26
+
+! yellow
+xterm*color11: rgb:fa/bd/2f
+
+! light blue
+xterm*color12: rgb:83/a5/98
+
+! light purple
+xterm*color13: rgb:d3/86/9b
+
+! light teal
+xterm*color14: rgb:8e/c0/7c
+
+! white
+xterm*color15: rgb:f3/f4/f5
