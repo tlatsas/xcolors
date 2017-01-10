@@ -1,0 +1,36 @@
+! Calm dark
+*.background:   #111111
+*.foreground:   #EEEEEE
+*.cursorColor:  #EEEEEE
+
+! Black
+*.color0:       #111111
+*.color8:      #1c1b19
+
+! red
+*.color1:       #c0392b
+*.color9:       #e74c3c
+
+! green
+*.color2:       #27ae60
+*.color10:      #29B865
+
+! yellow
+*.color3:       #f39c12
+*.color11:      #f1c40f
+
+! blue
+*.color4:       #2980b9
+*.color12:      #3498db
+
+! magenta
+*.color5:       #e02c6d
+*.color13:      #e35682
+
+! cyan
+*.color6:       #16a085
+*.color14:      #1abc9c
+
+! White
+*.color7:       #EEEEEE
+*.color15:      #CCCCCC
