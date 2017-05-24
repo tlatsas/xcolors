@@ -1,0 +1,36 @@
+! spooky/halloween colors
+
+*.foreground:   #e5dde9
+*.background:   #323232
+
+! black
+*.color0:       #3c3c3c
+*.color8:       #8eba6f
+
+! red
+*.color1:       #816789
+*.color9:       #d6b07c
+
+! green
+*.color2:       #636363
+*.color10:      #caa3da
+
+! yellow
+*.color3:       #493751
+*.color11:      #82ecdb
+
+! blue
+*.color4:       #6e5478
+*.color12:      #9cc0dc
+
+! magenta
+*.color5:       #9977a6
+*.color13:      #8fab7f
+
+! cyan
+*.color6:       #bda8c7
+*.color14:      #c7a982
+
+! white
+*.color7:       #e7e0eb
+*.color15:      #82e9d8
