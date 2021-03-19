@@ -1,4 +1,4 @@
 Flask==0.8
-Jinja2==2.6
+Jinja2==2.11.3
 Werkzeug==0.8.3
 wsgiref==0.1.2
