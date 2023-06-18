@@ -3,18 +3,18 @@
 About
 -----
 
-This is the source code that powers [xcolors.net](http://xcolors.net). Xcolors.net is a color theme
+This is the source code that powers xcolors.net. Xcolors.net is a color theme
 directory for terminals that support color configuration through
 [X resources](http://en.wikipedia.org/wiki/X_resources). It provides a visual presentation of the themes
 and will hopefully [grow over time](https://github.com/tlatsas/xcolors#contribute) with help from
-the community :).
+the community.
 
 
 How to use these themes
 -----------------------
 
 Download and use the `#include` directive in your `.Xdefaults` or `.Xresources` files. Then load/reload
-using the `xrdb` utility. For more information see [here](http://kb.mit.edu/confluence/pages/viewpage.action?pageId=3907291).
+using the `xrdb` utility.
 
 E.g.:
 
@@ -34,7 +34,7 @@ Contribute
 
 5.  Make a pull request (make sure you are *not* on Master branch)
 
-6.  Changes will show at the [xcolors site](http://xcolors.net) as soon as the PR is merged to the master branch.
+6.  Changes will show at the xcolors site as soon as the PR is merged to the master branch.
 
 7.  You make it to the [hall of fame](https://github.com/tlatsas/xcolors/contributors).
 
